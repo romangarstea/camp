@@ -1,0 +1,610 @@
+/*
+ * Nom: Garstea Roman
+ * Groupe: 15628
+ * Projet: Projet Web 1
+ * Thématique : Camps de jour
+ * REMISE: 02 02 2018
+ *
+ */
+
+
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css?family=Khula:300');
+@import url('https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200i,300,400,400i');
+
+
+* { margin: 0px;
+	padding: 0px;
+}
+body {  
+    text-align: center;
+	background-color: #ffffff;
+    font-family: 'Dosis', sans-serif;
+    font-size: 16px;
+    color: #e2e2e2;
+}
+section {
+	background-color: #fafafa;
+	max-width: 992px;
+    min-width: 500px;
+	width: 100%;
+    height: 100%;
+	padding: 0px;	
+    margin: 0px auto;
+}
+
+
+
+/*----------------------------------------------------*/
+/*UTILS*/
+/*----------------------------------------------------*/
+.mb_50{
+    margin-bottom: 50px;
+}
+.mb_10{
+    margin-bottom: 10px;
+}
+.mb_20{
+    margin-bottom: 20px;
+}
+.ml_5{
+    margin-left: 5px;
+}
+.mt_m10{
+    margin-top: -10px;
+}
+.txt_Rouge{
+    color: #f34949;
+}
+
+
+
+/*----------------------------------------------------*/
+/*HEADER*/	
+/*----------------------------------------------------*/
+header img{
+    width: 100%;
+    height: auto;
+}
+.ligne {
+    height:15px;
+    background-color: #f34949;
+}
+.logo {
+    width: 60%;
+    padding: 1%;
+}
+.logo_img{
+    width: 100%;
+    height: auto;
+}
+.header_img {
+    margin: 0px;
+    margin-bottom: -4px;
+}
+.form_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #fafafa;
+    padding: 2% 1%;
+    margin-top: -1%;
+    color: #979797;
+    font-size: 14px;
+}
+.form_box_col{
+    flex: 0 0 48%;
+    display: flex;
+    flex-direction: column;
+}
+.form_box_col_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 8px 0px;
+}
+.select_box{
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+}
+.checkbox_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+select{
+    width: 140px;
+    /*height: 150px;*/
+    border:1px solid #b1afa5;
+    /*overflow-y: scroll;*/
+    color: #9f9f9f;
+    font-size: 14px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 3px #d2d2d2 inset;
+    padding-left: 1%;
+}
+option:hover{
+    color: #f8f8f8;
+    background-color: #4b4b4b;
+}
+option{
+    color: #9f9f9f;
+}
+
+.select_arrondissement{
+    width: 100%;
+}
+.form_box_submit{
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+input[type=submit] {
+    background-color: #fafafa;
+    border: 1px solid #b6b6b6;
+    border-radius: 3px;
+    color: #868686;
+    width: 100px;
+    /*transition: all 1s;*/
+}
+input[type=submit]:hover {
+    background-color: #6c6c6c;
+    border: 1px solid #b6b6b6;
+    border-radius: 3px;
+    color: #d3d3d3;
+    /*transition: all 1s;*/
+}
+
+/* checkbox personaliser - debut  */
+/* j'outilise  https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
+.container {
+    display: block;
+    position: relative;
+    text-align: left;
+    padding-left: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 90px;
+}
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #fefefe;
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px #d6d6d6 inset;
+    border: 1px solid #b9b9b9;
+}
+.container:hover input ~ .checkmark {
+    background-color: #ffffff;
+}
+.container input:checked ~ .checkmark {
+    background-color: #ffffff;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+.container .checkmark:after {
+    left: 4px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid #969696;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+/* checkbox personaliser - fin  */
+
+
+
+/*----------------------------------------------------*/
+/*ARTICLE*/
+/*----------------------------------------------------*/
+article{
+    width:78%;
+    height:auto;
+    margin: 0px auto;
+    margin-bottom: 100px;
+}
+.publiciter_img{
+    margin-bottom: 50px;
+}
+.publiciter_img, .publiciter_img img {
+    width:100%;
+    height:auto;
+}
+h1{
+    color: #5f5f5f;
+    text-align: left;
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+
+
+/*----------------------------------------------------*/
+/* Page1/Table */
+/*----------------------------------------------------*/
+.tbl{
+    margin-bottom: 100px;
+}
+#tblLigne{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+}
+.tblRow{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 2px solid #fafafa;
+}
+.tblRow_colNr{
+    display: flex;
+    flex: 0 1 5%;
+    justify-content: center;
+}
+.colFondVert{
+    background-color:#59E717 ;
+}
+.colFondJeun{
+    background-color:#ffd513 ;
+}
+.colFondRouge{
+    background-color:#FF2752 ;
+}
+.tblRow_colDonnees{
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 85%;
+}
+.tblRow_colDonnees_row{
+    display: flex;
+    justify-content: flex-start;
+    background-color: #424242;
+    padding-left: 10px;
+}
+.height_donnees{
+    flex:1 1 auto;
+}
+.tblRow_colCote{
+    display: flex;
+    flex: 0 1 10%;
+    justify-content: center;
+    background-color: #323232;
+}
+
+
+
+/*----------------------------------------------------*/
+/* Page1/Elements de table */
+/*----------------------------------------------------*/
+.el_nom{
+    flex: 0 1 60%;
+    text-align: left;
+}
+.el_nom a{
+    color: #a7a7a7;
+    text-decoration:none;
+}
+.el_nom a:hover{
+    color: #e5e5e5;
+    text-decoration:none;
+}
+.trier_hover {
+    color: #b8b8b8;
+}
+.trier_hover:hover {
+    color: #ff1736;
+    margin-bottom: 5px;
+    font-size: 1.4em;
+    transition: color 0.5s;
+}
+.el_age{
+    flex: 0 4 20%;
+    min-width: 50px;
+    text-align: center;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+.el_prix{
+    flex: 0 4 20%;
+    min-width: 50px;
+    text-align: center;
+}
+.el_arrondissement{
+    color: #8e8e8e;
+}
+.el_activites{
+    font-family: 'Khula', sans-serif;
+    font-weight:100;
+    font-size: 14px;
+}
+.el_cote{
+    flex: 0 1 20%;
+    min-width: 60px;
+    font-size: 2.6em;
+}
+.star{
+    color: #ffd513;
+    margin-left:4px;
+}
+.trier{
+    font-size: 14px;
+    color: #8e8e8e;
+}
+.trierPaddingNom{
+    padding-left: 50px;
+}
+.trierBckCol{
+    background-color: #323232;
+    border-top-left-radius: 2px;
+}
+.trierRow{
+    border-bottom: 2px solid #f4f4f4;
+    height: 40px;
+}
+
+
+
+/*----------------------------------------------------*/
+/* Page2/Affichage de information */
+/*----------------------------------------------------*/
+.inf{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+.inf h1{
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 3em;
+    text-align: center;
+}
+.infRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inf_elAgePrixCote{
+    flex:0 1 130px;
+    font-size: 1.4em;
+    color: #777777;
+}
+.inf_elNom{
+    flex: 0 1 40%;
+    text-align: right;
+    padding-right: 20px;
+    color: #3b8bd7;
+}
+.inf_elValeur{
+    flex: 0 1 60%;
+    text-align: left;
+    padding-right: 20px;
+    color: #777777;
+}
+.infRow img{
+    width: 100%;
+    height: auto;
+}
+.infRow_txt{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    margin-top: 20px;
+}
+.infRow_txt p{
+    color: #777777;
+    margin:10px;
+    text-indent: 50px;
+}
+.txt_premierMot{
+    color: #5a5a5a;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.inf_elValeur a:link{
+    color: #cc2120;
+    text-decoration:none;
+}
+.inf_elValeur a:hover{
+    color:red;
+    text-decoration:none;
+}
+
+
+
+/*----------------------------------*/
+/* Page2/Affichage des commentaires */
+/*----------------------------------*/
+h2{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    margin-bottom: 14px;
+    font-size: 1.6em;
+    color:#5e5e5e;
+}
+.com{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    margin-bottom: 80px;
+}
+.comRow{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    color: #777777;
+    margin-bottom: 10px;
+}
+.com_colCouleaur{
+    flex: 0 0 20px;
+    width: 20px;
+}
+.bckCouleurVert{
+    background-color: #bce98c;
+}
+.bckCouleurJeune{
+    background-color: #ffe38d;
+}
+.bckCouleurRouge{
+    background-color: #ff9797;
+}
+.com_colTxt{
+    text-align: left;
+    padding-left: 15px;
+}
+.com_elMail{
+    font-style: italic;
+}
+.com_elTxt{}
+.com_elNote{
+    color:#323232;
+}
+
+
+
+/*------------------------------*/
+/* Page2/Ajouter un commentaire */
+/*------------------------------*/
+.comAjouter{
+
+}
+.comAjouter_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.comAjouter form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.comAjouter input[type=email]{
+    width: 270px;
+}
+.comAjouter input[type=number]{
+    width: 60px;
+}
+.comAjouter input[type=submit]{
+    width: 100px;
+    text-align: center;
+    background-color: #6c6c6c;
+    border: 1px solid white;
+    color: #d4d4d4;
+}
+.comAjouter input[type=submit]:hover{
+    color: #f3f3f3;
+}
+.comAjouter input, textarea{
+    border-radius: 3px;
+    border: 1px solid #c5c5c5;
+    color: #828282;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+
+    padding-left: 5px;
+}
+.comAjouter textarea{
+    flex: 1 1 270px;
+    height: 100px;
+
+}
+
+
+
+/*----------------------------*/
+/* Footer */
+/*----------------------------*/
+footer{
+    width: 100%;
+
+    background-color: #f55555;
+
+}
+footer a{
+    color: #f9f9f9;
+    text-decoration:none
+}
+footer a:hover{
+    color: #e3e3e3;
+    text-decoration:none
+}
+
+
+
+/*************************************/
+/* @media  */
+/*************************************/
+/*Header*/
+@media screen and (max-width: 992px) {
+    .form_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form_box_col{
+        width: 466px;
+    }
+    .form_box_col_row{
+        margin: 4px 0px;
+    }
+    .publiciter_img{
+        width:100%;
+    }
+}
+/*Article*/
+@media screen and (max-width: 768px) {
+    article{
+        width:100%;
+        height:auto;
+        margin: 0px auto;
+        margin-bottom: 100px;
+    }
+    h1{
+        margin-left: 0.8em;
+    }
+    .tblRow{
+        width: 98%;
+        margin: 0px auto;
+    }
+    /*page2*/
+    .infRow_txt{
+        padding: 0px 20px;
+    }
+    .com{
+        width: 94%;
+        margin: 0px auto;
+        margin-bottom: 80px;
+    }
+    .comAjouter{
+        width: 94%;
+        margin: 0px auto;
+        margin-bottom: 80px;
+    }
+}
+
